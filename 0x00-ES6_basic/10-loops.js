@@ -3,6 +3,5 @@ export default function appendToEachArrayValue(array, appendString) {
   for (let value of array) {
     array[i++] = appendString + value;
   }
-
   return array;
 }
