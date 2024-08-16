@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "0x00. ES6 Basics Projects",
   "main": "0-constants.js",
+  "type": "module",
   "scripts": {
     "lint": "eslint",
     "check-lint": "lint [0-9]*.js",
