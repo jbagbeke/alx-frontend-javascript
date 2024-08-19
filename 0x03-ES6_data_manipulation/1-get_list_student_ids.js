@@ -1,3 +1,3 @@
 export default function getListStudentIds (objArr) {
-  return typeof objArr === 'object' ? objArr.map(elem => elem.id) : []
+  return objArr instanceof Array ? objArr.map(elem => elem.id) : []
 }
