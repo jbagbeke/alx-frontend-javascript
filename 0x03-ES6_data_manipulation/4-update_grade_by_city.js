@@ -1,8 +1,16 @@
 export default function updateStudentGradeByCity (stds, city, newGrades) {
-  stGrds = 
-}
+  return stds
+    .filter(elem => elem.location === city)
+    .map(elem => {
+      elem.grade = 'N/A'
 
-/*
-1. All students listed in the newGrades must be valid students
-2. 
-*/
+      for (let [i, v] of Object.entries(newGrades)) {
+        if (elem.id === v.studentId && elem.grade === 'N/A') {
+          elem.grade = v.grade
+          break
+        }
+      }
+
+      return elem
+    })
+}
