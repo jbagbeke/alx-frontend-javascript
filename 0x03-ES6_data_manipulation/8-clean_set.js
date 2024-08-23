@@ -4,7 +4,7 @@ export default function cleanSet (set, startString) {
   const [clean, sLen] = [[], startString.length]
 
   set.forEach(x => {
-    if (x.startsWith(startString)) clean.push(x.slice(sLen))
+    if (x.startsWith(startString)) clean.push(x.slice(sLen).trim())
   })
   return clean.join('-')
 }
