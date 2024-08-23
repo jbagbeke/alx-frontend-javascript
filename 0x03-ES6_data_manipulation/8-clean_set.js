@@ -3,9 +3,11 @@ export default function cleanSet (set, startString) {
 
   const [clean, sLen] = [[], startString.length]
 
-  set.forEach(x => {
+  for (let x of set) {
     x = x.trim()
-    if (x.startsWith(startString)) clean.push(x.slice(sLen).trim())
-  })
+    if (x.startsWith(startString)) {
+        clean.push(x.slice(sLen))
+    }
+  }
   return clean.join('-')
 }
