@@ -1,8 +1,12 @@
 export default function cleanSet (set, startString) {
   if (startString.length < 1) return startString
+  const [clean, sLen] = [[], startString.length]
 
-  return [...set]
-    .filter(elem => elem.startsWith(startString))
-    .map(elem => elem.replace(startString, ''))
-    .join('-')
+  set.forEach(x => {
+    if (x.startsWith(startString))
+        clean.push(x.slice(sLen))
+  });
+
+  return clean.join('-')
+
 }
