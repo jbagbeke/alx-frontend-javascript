@@ -16,4 +16,3 @@ export function queryAPI (endpoint) {
 
   track_calls()
 }
-
